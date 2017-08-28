@@ -1,7 +1,7 @@
 def sum_of_even_fibonaci_numbers(max_value)
-  first_number = 1
-  second_number = 2
-  sum = 2
+  first_number = 0
+  second_number = 1
+  sum = 0
 
   while true do
     third_number = next_number(first_number, second_number)
