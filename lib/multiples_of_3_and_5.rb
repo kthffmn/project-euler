@@ -1,11 +1,8 @@
 def sum_multiples_of_3_and_5(limit)
-  sum = 0
-  (0...limit).each do |number|
-    if is_multiple_of_3_or_5?(number)
-      sum = sum + number
-    end
+  (0...limit).inject(0) do |sum, number|
+    sum += number if is_multiple_of_3_or_5?(number)
+    sum
   end
-  sum
 end
 
 def is_multiple_of_3_or_5?(number)
