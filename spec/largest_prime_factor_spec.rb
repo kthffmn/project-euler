@@ -8,7 +8,7 @@ describe "#largest_prime_factor" do
     end
   end
 
-  context "with 600,851,475,143" do
+  xcontext "with 600,851,475,143" do
     it "returns 6,857" do
       expect(largest_prime_factor(600851475143)).to eq(6857)
     end
@@ -41,7 +41,7 @@ describe "#is_factor?" do
   end
 end
 
-describe "#square_root?" do
+describe "#square_root" do
   context "with 9" do
     it "returns 3" do
       expect(square_root(9)).to eq(3)
