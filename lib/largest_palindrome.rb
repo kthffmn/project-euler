@@ -1,8 +1,9 @@
 def largest_palindrome(num_of_digits)
   limit = calculate_limit(num_of_digits)
+
   largest_palindrome = 1
   (1...limit).each do |first_factor|
-    (1...limit).each do |second_factor|
+    (first_factor...limit).each do |second_factor|
       product = first_factor * second_factor
       if (is_palindrome?(product) && product > largest_palindrome)
         largest_palindrome = product
@@ -14,9 +15,7 @@ end
 
 def calculate_limit(num_of_digits)
   limit = 1
-  num_of_digits.times do
-    limit *= 10
-  end
+  num_of_digits.times { limit *= 10 }
   limit
 end
 
