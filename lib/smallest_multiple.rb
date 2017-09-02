@@ -1,15 +1,13 @@
 def smallest_multiple(max)
   product = max
-  product += max until is_divisible?(max, product)
+  factors = (3..max).to_a.reverse
+  product += max until is_divisible?(factors, product)
   product
 end
 
-def is_divisible?(max, product)
+def is_divisible?(factors, product)
   return false if odd?(product)
-
-  (3..max).all? do |factor|
-    product % factor == 0
-  end
+  factors.all? { |factor| product % factor == 0 }
 end
 
 def odd?(number)

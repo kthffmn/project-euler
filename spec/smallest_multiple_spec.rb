@@ -8,7 +8,7 @@ describe "#smallest_multiple" do
     end
   end
 
-  xcontext "with 20" do
+  context "with 20" do
     it "returns 232,792,560" do
       expect(smallest_multiple(20)).to eq(232792560)
     end
@@ -16,13 +16,13 @@ describe "#smallest_multiple" do
 end
 
 describe "#is_divisible?" do
-  context "with a max of 10" do
-    it "and a factor of 2,520 returns true" do
-      expect(is_divisible?(10, 2520)).to eq(true)
+  context "with a factors array with a max of 10" do
+    it "and a product of 2,520 returns true" do
+      expect(is_divisible?([10,9,8,7,6,5,4,3], 2520)).to eq(true)
     end
 
-    it "and a factor of 2,519 returns false" do
-      expect(is_divisible?(10, 2519)).to eq(false)
+    it "and a product of 2,519 returns false" do
+      expect(is_divisible?([10,9,8,7,6,5,4,3], 2519)).to eq(false)
     end
   end
 end
