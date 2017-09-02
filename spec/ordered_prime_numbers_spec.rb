@@ -1,4 +1,5 @@
 require_relative "../lib/ordered_prime_numbers.rb"
+require_relative "./spec_helper.rb"
 
 describe "#ordered_prime_numbers" do
   context "with 6th position" do
@@ -7,7 +8,7 @@ describe "#ordered_prime_numbers" do
     end
   end
 
-  context "with 10,001th position" do
+  xcontext "with 10,001th position" do
     it "returns 104,743" do
       expect(ordered_prime_numbers(10001)).to eq(104743)
     end
